@@ -1,5 +1,6 @@
 import { useLocation, useRoute } from 'preact-iso'
 import { states, hasRefinements, type StateId } from '../data/exercises'
+import { path } from '../utils/paths'
 
 export function Refine() {
   const { route } = useLocation()
@@ -12,16 +13,16 @@ export function Refine() {
   if (!state || !hasRefinements(stateId)) {
     const exerciseId = state?.defaultExercise || 'paced_breath'
     // Use setTimeout to avoid render-time navigation
-    setTimeout(() => route(`/x/${exerciseId}`), 0)
+    setTimeout(() => route(path(`/x/${exerciseId}`)), 0)
     return null
   }
 
   const handleSelect = (exerciseId: string) => {
-    route(`/x/${exerciseId}`)
+    route(path(`/x/${exerciseId}`))
   }
 
   const handleBack = () => {
-    route('/')
+    route(path('/'))
   }
 
   return (

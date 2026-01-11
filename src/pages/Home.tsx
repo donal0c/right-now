@@ -1,5 +1,6 @@
 import { useLocation } from 'preact-iso'
 import { getAllStates, type StateId } from '../data/exercises'
+import { path } from '../utils/paths'
 
 // Import icons
 import anxiousIcon from '../assets/icons/anxious.png'
@@ -28,7 +29,7 @@ export function Home() {
   const { route } = useLocation()
 
   const handleSelect = (stateId: string) => {
-    route(`/s/${stateId}`)
+    route(path(`/s/${stateId}`))
   }
 
   return (
@@ -60,7 +61,7 @@ export function Home() {
       </div>
 
       <a
-        href="/about"
+        href={path('/about')}
         className="mt-12 text-sm"
         style={{ color: 'var(--color-text-tertiary)' }}
       >

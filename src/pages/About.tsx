@@ -1,10 +1,11 @@
 import { useLocation } from 'preact-iso'
+import { path } from '../utils/paths'
 
 export function About() {
   const { route } = useLocation()
 
   const handleBack = () => {
-    route('/')
+    route(path('/'))
   }
 
   return (

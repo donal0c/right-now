@@ -9,6 +9,7 @@ import {
 } from '../data/exercises'
 import { BreathingOrb } from '../components/BreathingOrb'
 import { triggerHaptic } from '../hooks/useHaptic'
+import { path } from '../utils/paths'
 
 type PlayerState = 'playing' | 'paused' | 'completed'
 
@@ -90,7 +91,7 @@ export function Exercise() {
 
   const handleDone = () => {
     triggerHaptic('buttonPress')
-    route('/')
+    route(path('/'))
   }
 
   const handleRestart = () => {
@@ -118,7 +119,7 @@ export function Exercise() {
       <main className="flex-1 flex flex-col items-center justify-center p-6">
         <p style={{ color: 'var(--color-text-secondary)' }}>Exercise not found</p>
         <button
-          onClick={() => route('/')}
+          onClick={() => route(path('/'))}
           className="mt-4 px-6 py-3 rounded-full"
           style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}
         >

@@ -1,4 +1,5 @@
 import { useLocation } from 'preact-iso'
+import { path } from '../utils/paths'
 
 export function NotFound() {
   const { route } = useLocation()
@@ -12,7 +13,7 @@ export function NotFound() {
         Let's get you back on track.
       </p>
       <button
-        onClick={() => route('/')}
+        onClick={() => route(path('/'))}
         className="px-8 py-4 rounded-full text-lg font-medium"
         style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}
       >
