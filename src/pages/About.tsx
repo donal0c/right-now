@@ -9,7 +9,7 @@ export function About() {
   }
 
   return (
-    <main className="flex-1 flex flex-col px-8 py-6 safe-area-inset max-w-lg mx-auto">
+    <main className="flex-1 flex flex-col px-10 py-6 safe-area-inset w-full max-w-md mx-auto">
       <button
         onClick={handleBack}
         className="self-start p-2 -ml-2 rounded-full mb-4"
