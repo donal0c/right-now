@@ -19,7 +19,8 @@ export default defineConfig({
         background_color: '#FAF8F5',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
+        scope: '/right-now/',
+        start_url: '/right-now/',
         icons: [
           {
             src: 'pwa-64x64.png',
@@ -48,21 +49,21 @@ export default defineConfig({
             name: 'Calm Now (60s)',
             short_name: 'Calm',
             description: 'Quick 60-second calming exercise',
-            url: '/x/phys_sigh?dur=60',
+            url: '/right-now/x/phys_sigh?dur=60',
             icons: [{ src: 'shortcut-calm.png', sizes: '96x96' }]
           },
           {
             name: 'Slow Breath (2m)',
             short_name: 'Breathe',
             description: 'Two-minute paced breathing',
-            url: '/x/paced_breath?dur=120',
+            url: '/right-now/x/paced_breath?dur=120',
             icons: [{ src: 'shortcut-breathe.png', sizes: '96x96' }]
           },
           {
             name: 'Ground (2m)',
             short_name: 'Ground',
             description: 'Two-minute grounding exercise',
-            url: '/x/ground_54321?dur=120',
+            url: '/right-now/x/ground_54321?dur=120',
             icons: [{ src: 'shortcut-ground.png', sizes: '96x96' }]
           }
         ]
